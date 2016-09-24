@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-sep-2016 0:39:03 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.LogComprobante" table="LOG_COMPROBANTE" schema="PRUEBAS" optimistic-lock="version">
+        <id name="idLogComprobante" type="big_decimal">
+            <column name="ID_LOG_COMPROBANTE" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="usuario" type="string">
+            <column name="USUARIO" length="45" not-null="true" />
+        </property>
+        <property name="evento" type="blob">
+            <column name="EVENTO" not-null="true" />
+        </property>
+        <property name="fechaRegistro" type="date">
+            <column name="FECHA_REGISTRO" length="7" not-null="true" />
+        </property>
+        <property name="ip" type="string">
+            <column name="IP" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
